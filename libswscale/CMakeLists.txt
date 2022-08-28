@@ -1,0 +1,30 @@
+add_library(swscale)
+target_link_libraries(swscale PRIVATE ffmpeg_defaults)
+target_sources(swscale PRIVATE
+    half2float.c
+    gamma.c
+    alphablend.c
+    version.c
+    hscale.c
+    hscale_fast_bilinear.c
+    options.c
+    output.c
+    input.c
+    swscale.c
+    rgb2rgb.c
+    slice.c
+    swscale_unscaled.c
+    x86/input.asm
+    utils.c
+    x86/output.asm
+    x86/rgb_2_rgb.asm
+    x86/scale.asm
+    x86/scale_avx2.asm
+    vscale.c
+    x86/yuv2yuvX.asm
+    x86/yuv_2_rgb.asm
+    x86/hscale_fast_bilinear_simd.c
+    x86/yuv2rgb.c
+    x86/rgb2rgb.c
+    x86/swscale.c
+    yuv2rgb.c)
