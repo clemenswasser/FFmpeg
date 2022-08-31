@@ -31,6 +31,11 @@ add_subdirectory(libpostproc)
 add_subdirectory(libswresample)
 add_subdirectory(libswscale)
 
+include(CTest)
+if(BUILD_TESTING)
+    add_subdirectory(tests)
+endif()
+
 string(CONCAT FFMPEG_CONFIG_ASM_CONTENT
     "%define ARCH_AARCH64 0\n"
     "%define ARCH_ALPHA 0\n"
